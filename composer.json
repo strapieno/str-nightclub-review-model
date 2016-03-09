@@ -23,8 +23,8 @@
   },
   "autoload": {
     "psr-4": {
-      "Strapieno\\NightClub\\Model\\": "src/",
-      "Strapieno\\NightClub\\ModelTest\\": "tests/"
+      "Strapieno\\NightClubReview\\Model\\": "src/",
+      "Strapieno\\NightClubReview\\ModelTest\\": "tests/"
     },
     "classmap": [
       "./Module.php"

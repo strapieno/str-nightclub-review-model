@@ -1,6 +1,6 @@
 <phpunit bootstrap="tests/bootstrap.php" colors="true" verbose="true">
     <testsuites>
-        <testsuite name="Strapieno\NightClub\Model test suite">
+        <testsuite name="Strapieno\NightClubReview\Model test suite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>
