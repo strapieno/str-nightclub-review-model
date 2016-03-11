@@ -31,7 +31,7 @@ return [
         'Strapieno\NightClubReview\Model\ReviewModelService' => [
             'datagateway' => 'DataGateway\Mongo\Review',
             'type' => 'Strapieno\NightClubReview\Model\ReviewModelService',
-            'object' => 'Place',
+            'object' => 'Review',
             'resultset' => 'Strapieno\Model\ResultSet\HydratingResultSet',
             'paginator_criteria' => 'Strapieno\NightClubReview\Model\Criteria\ReviewCollectionCriteria',
             'prototype_strategy' => 'Matryoshka\Model\Object\PrototypeStrategy\ServiceLocatorStrategy',
