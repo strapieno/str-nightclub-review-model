@@ -3,6 +3,7 @@ namespace Strapieno\NightClubReview\Model\InputFilter;
 
 use Zend\InputFilter\Input;
 use Zend\InputFilter\InputFilter;
+use Zend\Validator\ValidatorPluginManager;
 
 /**
  * Class DefaultReviewInputFilter
@@ -24,10 +25,10 @@ class DefaultReviewInputFilter extends InputFilter
     {
         $input = new Input('best_rating');
         $input->setRequired(false);
-        // Filter
-        $filterManager = $this->getFactory()->getDefaultFilterChain()->getPluginManager();
-        $input->getFilterChain()->attach($filterManager->get('digits'));
-        $input->getFilterChain()->attach($filterManager->get('greaterthan', ['min' => 0]));
+        /** @var $validatorManager ValidatorPluginManager */
+        $validatorManager = $this->getFactory()->getDefaultValidatorChain()->getPluginManager();
+        $input->getValidatorChain()->attach($validatorManager->get('digits'));
+        $input->getValidatorChain()->attach($validatorManager->get('greaterthan', ['min' => 0]));
 
         $this->add($input);
         return $this;
@@ -40,10 +41,10 @@ class DefaultReviewInputFilter extends InputFilter
     {
         $input = new Input('rating_value');
         $input->setRequired(false);
-        // Filter
-        $filterManager = $this->getFactory()->getDefaultFilterChain()->getPluginManager();
-        $input->getFilterChain()->attach($filterManager->get('digits'));
-        $input->getFilterChain()->attach($filterManager->get('greaterthan', ['min' => 0]));
+        /** @var $validatorManager ValidatorPluginManager */
+        $validatorManager = $this->getFactory()->getDefaultValidatorChain()->getPluginManager();
+        $input->getValidatorChain()->attach($validatorManager->get('digits'));
+        $input->getValidatorChain()->attach($validatorManager->get('greaterthan', ['min' => 0]));
 
         $this->add($input);
         return $this;
@@ -56,10 +57,10 @@ class DefaultReviewInputFilter extends InputFilter
     {
         $input = new Input('worst_rating');
         $input->setRequired(false);
-        // Filter
-        $filterManager = $this->getFactory()->getDefaultFilterChain()->getPluginManager();
-        $input->getFilterChain()->attach($filterManager->get('digits'));
-        $input->getFilterChain()->attach($filterManager->get('greaterthan', ['min' => 0]));
+        /** @var $validatorManager ValidatorPluginManager */
+        $validatorManager = $this->getFactory()->getDefaultValidatorChain()->getPluginManager();
+        $input->getValidatorChain()->attach($validatorManager->get('digits'));
+        $input->getValidatorChain()->attach($validatorManager->get('greaterthan', ['min' => 0]));
 
         $this->add($input);
         return $this;

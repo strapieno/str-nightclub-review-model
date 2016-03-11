@@ -20,7 +20,7 @@ class DefaultInputFilter extends InputFilter
     {
         $inputFilter = $this->getFactory()
             ->getInputFilterManager()
-            ->get('Strapieno\NightClubReview\Model\InputFilter\DefaultReviewInputFilter\'');
+            ->get('Strapieno\NightClubReview\Model\InputFilter\DefaultReviewInputFilter');
 
         $this->add($inputFilter, 'rating');
         return $this;
