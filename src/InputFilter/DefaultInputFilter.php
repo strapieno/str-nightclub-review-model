@@ -1,6 +1,7 @@
 <?php
 namespace Strapieno\NightClubReview\Model\InputFilter;
 
+use Zend\InputFilter\Input;
 use Zend\InputFilter\InputFilter;
 
 /**
@@ -10,7 +11,9 @@ class DefaultInputFilter extends InputFilter
 {
     public function init()
     {
-        $this->addRatingInputFilter();
+        $this->addRatingInputFilter()
+            ->addNightClubIdInput()
+        ;
     }
 
     /**
@@ -23,6 +26,18 @@ class DefaultInputFilter extends InputFilter
             ->get('Strapieno\NightClubReview\Model\InputFilter\DefaultReviewInputFilter');
 
         $this->add($inputFilter, 'rating');
+        return $this;
+    }
+
+    /**
+     * @return $this
+     */
+    protected function addNightClubIdInput()
+    {
+        $input = new Input('nightclub_id');
+        $input->setRequired(true);
+
+        $this->add($input);
         return $this;
     }
 }

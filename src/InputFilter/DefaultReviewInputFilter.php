@@ -14,7 +14,7 @@ class DefaultReviewInputFilter extends InputFilter
     {
         $this->addBestRatingInput()
             ->addRatingValueInput()
-            ->addRatingValueInput()
+            ->addWorstRatingInput()
         ;
     }
 
@@ -40,7 +40,7 @@ class DefaultReviewInputFilter extends InputFilter
     protected function addRatingValueInput()
     {
         $input = new Input('rating_value');
-        $input->setRequired(false);
+        $input->setRequired(true);
         /** @var $validatorManager ValidatorPluginManager */
         $validatorManager = $this->getFactory()->getDefaultValidatorChain()->getPluginManager();
         $input->getValidatorChain()->attach($validatorManager->get('digits'));
@@ -65,5 +65,4 @@ class DefaultReviewInputFilter extends InputFilter
         $this->add($input);
         return $this;
     }
-
 }
