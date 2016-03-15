@@ -3,11 +3,11 @@ return [
     'service_manager' => [
         'invokables' => [
             'Strapieno\NightClubReview\Model\Criteria\Mongo\ReviewMongoCollectionCriteria'
-                => 'Strapieno\NightClubReview\Model\Criteria\Mongo\ReviewMongoCollectionCriteria'
+            => 'Strapieno\NightClubReview\Model\Criteria\Mongo\ReviewMongoCollectionCriteria'
         ],
         'aliases' => [
             'Strapieno\NightClubReview\Model\Criteria\ReviewCollectionCriteria'
-                => 'Strapieno\NightClubReview\Model\Criteria\Mongo\ReviewMongoCollectionCriteria'
+            => 'Strapieno\NightClubReview\Model\Criteria\Mongo\ReviewMongoCollectionCriteria'
         ]
     ],
     'mongodb' => [
@@ -34,7 +34,6 @@ return [
             'object' => 'Review',
             'resultset' => 'Strapieno\Model\ResultSet\HydratingResultSet',
             'paginator_criteria' => 'Strapieno\NightClubReview\Model\Criteria\ReviewCollectionCriteria',
-            'prototype_strategy' => 'Matryoshka\Model\Object\PrototypeStrategy\ServiceLocatorStrategy',
             'hydrator' => 'Strapieno\NightClubReview\Model\Hydrator\ReviewModelMongoHydrator',
             'listeners' => [
                 'Strapieno\Utils\Model\Listener\DateAwareListener',
