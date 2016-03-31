@@ -40,4 +40,46 @@ return [
             ],
         ],
     ],
+    'input_filter_specs' => [
+        'Strapieno\NightClubReview\Model\InputFilter\DefaultReviewInputFilter' => [
+            "rating_value" => [
+                'name' => 'rating_value',
+                'validators' => [
+                    "digits" => [
+                        'name' => 'digits',
+                        'break_chain_on_failure' => true
+                    ],
+                    "greaterthan" => [
+                        'name' => 'greaterthan',
+                        'break_chain_on_failure' => true,
+                        'options' => [
+                            // TODO retrive from object
+                            'min' => 0
+                        ],
+                    ],
+                    "lessthan" => [
+                        'name' => 'lessthan',
+                        'break_chain_on_failure' => true,
+                        'options' => [
+                            // TODO retrive from object
+                            'max' => 10
+                        ],
+                    ]
+                ]
+            ],
+
+        ],
+        'Strapieno\NightClubReview\Model\InputFilter\DefaultInputFilter' => [
+            "nightclub_id" => [
+                'name' => 'nightclub_id',
+                'validators' => [
+                    // TODO nightclub exist
+                ]
+            ],
+            "rating" => [
+                'name' => 'rating',
+                'type' => 'Strapieno\NightClubReview\Model\InputFilter\DefaultReviewInputFilter',
+            ]
+        ]
+    ]
 ];
