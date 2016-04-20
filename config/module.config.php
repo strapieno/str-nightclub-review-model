@@ -40,7 +40,7 @@ return [
             ],
         ],
     ],
-    'input_filter_specs' => [
+    'strapieno_input_filter_specs' => [
         'Strapieno\NightClubReview\Model\InputFilter\DefaultReviewInputFilter' => [
             "rating_value" => [
                 'name' => 'rating_value',
