@@ -73,11 +73,9 @@ return [
             "nightclub_id" => [
                 'name' => 'nightclub_id',
                 'validators' => [
-                    'validators' => [
-                        'nightclubentityexist' => [
-                            'name' => 'nightclubentityexist',
-                            'break_chain_on_failure' => true
-                        ]
+                    'nightclubentityexist' => [
+                        'name' => 'nightclubentityexist',
+                        'break_chain_on_failure' => true
                     ]
                 ]
             ],
