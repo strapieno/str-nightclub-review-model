@@ -73,7 +73,12 @@ return [
             "nightclub_id" => [
                 'name' => 'nightclub_id',
                 'validators' => [
-                    // TODO nightclub exist
+                    'validators' => [
+                        'nightclubentityexist' => [
+                            'name' => 'nightclubentityexist',
+                            'break_chain_on_failure' => true
+                        ]
+                    ]
                 ]
             ],
             "rating" => [
