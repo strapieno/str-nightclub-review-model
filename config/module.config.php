@@ -79,6 +79,19 @@ return [
                     ]
                 ]
             ],
+            "review_body" => [
+                'name' => 'review_body',
+                'validators' => [
+                    'stringlength' => [
+                        'name' => 'stringlength',
+                        'break_chain_on_failure' => true,
+                        'options' => [
+                            'min' => 25,
+                            'max' => 250
+                        ]
+                    ]
+                ]
+            ],
             "rating" => [
                 'name' => 'rating',
                 'type' => 'Strapieno\NightClubReview\Model\InputFilter\DefaultReviewInputFilter',
