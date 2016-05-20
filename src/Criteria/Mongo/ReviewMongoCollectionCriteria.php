@@ -8,5 +8,14 @@ use Matryoshka\Model\Wrapper\Mongo\Criteria\FindAllCriteria;
  */
 class ReviewMongoCollectionCriteria extends FindAllCriteria
 {
+    /**
+     * @param $placeId
+     * @return $this
+     */
+    public function setPlaceId($placeId)
+    {
+        $this->selectionCriteria['night_club_reference.id'] = $placeId;
 
+        return $this;
+    }
 }

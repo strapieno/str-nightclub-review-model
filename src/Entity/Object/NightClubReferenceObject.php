@@ -9,7 +9,7 @@ use Strapieno\Utils\Model\Object\ObjectInterface;
 /**
  * Class NightClubReferenceObject
  */
-class NightClubReferenceObject extends AbstractObject implements ObjectInterface, EntityReferenceInterface
+class NightClubReferenceObject extends AbstractObject implements  ObjectInterface, EntityReferenceInterface
 {
     use EntityReferenceTrait;
 
