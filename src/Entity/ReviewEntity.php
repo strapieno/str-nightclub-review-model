@@ -2,6 +2,8 @@
 namespace Strapieno\NightClubReview\Model\Entity;
 
 use Matryoshka\Model\Object\ActiveRecord\AbstractActiveRecord;
+use Strapieno\NightClub\Model\Entity\Reference\NightClubReferenceAwareInterface;
+use Strapieno\NightClub\Model\Entity\Reference\NightClubReferenceAwareTrait;
 use Strapieno\Utils\Model\Entity\DateHistoryAwareInterface;
 use Strapieno\Utils\Model\Entity\DateHistoryAwareTrait;
 use Strapieno\Utils\Model\Entity\EntityInterface;
@@ -16,31 +18,10 @@ use Zend\Stdlib\Hydrator\HydratorAwareInterface;
 class ReviewEntity extends AbstractActiveRecord implements ReviewInterface,
     EntityInterface,
     DateHistoryAwareInterface,
-    HydratorAwareInterface
+    HydratorAwareInterface,
+    NightClubReferenceAwareInterface
 {
     use ReviewTrait;
     use DateHistoryAwareTrait;
-
-    /**
-     * @var EntityReferenceInterface
-     */
-    protected $nightClubReference;
-
-    /**
-     * @return EntityReferenceInterface
-     */
-    public function getNightClubReference()
-    {
-        return $this->nightClubReference;
-    }
-
-    /**
-     * @param EntityReferenceInterface $nightClubReference
-     * @return $this
-     */
-    public function setNightClubReference(EntityReferenceInterface $nightClubReference)
-    {
-        $this->nightClubReference = $nightClubReference;
-        return $this;
-    }
+    use NightClubReferenceAwareTrait;
 }
