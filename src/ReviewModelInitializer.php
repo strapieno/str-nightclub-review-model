@@ -1,12 +1,12 @@
 <?php
 namespace Strapieno\NightClubReview\Model;
 
-use Strapieno\Utils\Inizilizer\AbstractModelServiceInizilizer;
+use Strapieno\Utils\Initializer\AbstractModelServiceInitializer;
 
 /**
  * Class ReviewModelInitializer
  */
-class ReviewModelInitializer extends AbstractModelServiceInizilizer
+class ReviewModelInitializer extends AbstractModelServiceInitializer
 {
     const SERVICE_NAME = ReviewModelService::class;
     const INSTANCE_CLASS = ReviewModelAwareInterface::class;
