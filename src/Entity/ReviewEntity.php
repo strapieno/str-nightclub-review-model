@@ -7,7 +7,6 @@ use Strapieno\NightClub\Model\Entity\Reference\NightClubReferenceAwareTrait;
 use Strapieno\Utils\Model\Entity\DateHistoryAwareInterface;
 use Strapieno\Utils\Model\Entity\DateHistoryAwareTrait;
 use Strapieno\Utils\Model\Entity\EntityInterface;
-use Strapieno\Utils\Model\Object\EntityReference\EntityReferenceInterface;
 use Strapieno\Utils\Model\Object\Review\ReviewInterface;
 use Strapieno\Utils\Model\Object\Review\ReviewTrait;
 use Zend\Stdlib\Hydrator\HydratorAwareInterface;
