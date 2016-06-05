@@ -22,7 +22,7 @@ return [
         ],
     ],
     'matryoshka-objects' => [
-        'Review' => [
+        'NightClubReview' => [
             'type' => 'Strapieno\NightClubReview\Model\Entity\ReviewEntity',
             'active_record_criteria' => 'Strapieno\Model\Criteria\NotIsolatedActiveRecordCriteria'
         ]
@@ -31,7 +31,7 @@ return [
         'Strapieno\NightClubReview\Model\ReviewModelService' => [
             'datagateway' => 'DataGateway\Mongo\Review',
             'type' => 'Strapieno\NightClubReview\Model\ReviewModelService',
-            'object' => 'Review',
+            'object' => 'NightClubReview',
             'resultset' => 'Strapieno\Model\ResultSet\HydratingResultSet',
             'paginator_criteria' => 'Strapieno\NightClubReview\Model\Criteria\ReviewCollectionCriteria',
             'hydrator' => 'Strapieno\NightClubReview\Model\Hydrator\ReviewModelMongoHydrator',
